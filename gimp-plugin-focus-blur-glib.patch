@@ -1,0 +1,198 @@
+diff -aurN focusblur-3.2.6.orig/src/aaa.h focusblur-3.2.6/src/aaa.h
+--- focusblur-3.2.6.orig/src/aaa.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/aaa.h	2012-11-05 22:47:05.869117517 +0100
+@@ -19,8 +19,7 @@
+ #ifndef __AAA_H__
+ #define __AAA_H__
+ 
+-#include <glib/gmacros.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ 
+ G_BEGIN_DECLS
+diff -aurN focusblur-3.2.6.orig/src/brush.h focusblur-3.2.6/src/brush.h
+--- focusblur-3.2.6.orig/src/brush.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/brush.h	2012-11-05 22:51:31.836256321 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_BRUSH_H__
+ #define __FOCUSBLUR_BRUSH_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include "focusblurtypes.h"
+ 
+ G_BEGIN_DECLS
+diff -aurN focusblur-3.2.6.orig/src/depthmap.h focusblur-3.2.6/src/depthmap.h
+--- focusblur-3.2.6.orig/src/depthmap.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/depthmap.h	2012-11-05 22:52:46.686821324 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_DEPTHMAP_H__
+ #define __FOCUSBLUR_DEPTHMAP_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ #include "focusblurtypes.h"
+ #include "focusblurenums.h"
+diff -aurN focusblur-3.2.6.orig/src/diffusion.h focusblur-3.2.6/src/diffusion.h
+--- focusblur-3.2.6.orig/src/diffusion.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/diffusion.h	2012-11-05 22:47:35.846256471 +0100
+@@ -23,7 +23,7 @@
+ #define __FOCUSBLUR_DIFFUSION_H__
+ 
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ #include "focusblur.h"
+ #include "focusblurtypes.h"
+diff -aurN focusblur-3.2.6.orig/src/fftblurbuffer.h focusblur-3.2.6/src/fftblurbuffer.h
+--- focusblur-3.2.6.orig/src/fftblurbuffer.h	2012-11-05 22:46:14.255213031 +0100
++++ focusblur-3.2.6/src/fftblurbuffer.h	2012-11-05 22:53:21.424101240 +0100
+@@ -28,8 +28,7 @@
+ #endif
+ #include <fftw3.h>
+ 
+-#include <glib/gmacros.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <gtk/gtkstyle.h>
+ #include <libgimp/gimptypes.h>
+ #include <libgimpwidgets/gimpwidgetstypes.h>
+diff -aurN focusblur-3.2.6.orig/src/fftblur.h focusblur-3.2.6/src/fftblur.h
+--- focusblur-3.2.6.orig/src/fftblur.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/fftblur.h	2012-11-05 22:53:40.567806961 +0100
+@@ -23,8 +23,7 @@
+ #define __FOCUSBLUR_FFTBLUR_H__
+ 
+ 
+-#include <glib/gmacros.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <libgimpwidgets/gimpwidgetstypes.h>
+ 
+ #include "focusblurparam.h"
+diff -aurN focusblur-3.2.6.orig/src/fftblurproc.h focusblur-3.2.6/src/fftblurproc.h
+--- focusblur-3.2.6.orig/src/fftblurproc.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/fftblurproc.h	2012-11-05 22:53:55.216231062 +0100
+@@ -23,8 +23,7 @@
+ #define __FOCUSBLUR_FFTBLUR_PROC_H__
+ 
+ 
+-#include <glib/gmacros.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ #include "focusblurtypes.h"
+ 
+diff -aurN focusblur-3.2.6.orig/src/focusblur.h focusblur-3.2.6/src/focusblur.h
+--- focusblur-3.2.6.orig/src/focusblur.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/focusblur.h	2012-11-05 22:47:52.430871330 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_H__
+ #define __FOCUSBLUR_H__
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
+diff -aurN focusblur-3.2.6.orig/src/focusblurparam.h focusblur-3.2.6/src/focusblurparam.h
+--- focusblur-3.2.6.orig/src/focusblurparam.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/focusblurparam.h	2012-11-05 22:48:09.550506819 +0100
+@@ -22,8 +22,7 @@
+ #ifndef __FOCUSBLUR_PARAM_H__
+ #define __FOCUSBLUR_PARAM_H__
+ 
+-#include <glib/gmacros.h>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <gtk/gtkstyle.h>
+ #include <libgimp/gimptypes.h>
+ 
+diff -aurN focusblur-3.2.6.orig/src/focusblurrc.c focusblur-3.2.6/src/focusblurrc.c
+--- focusblur-3.2.6.orig/src/focusblurrc.c	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/focusblurrc.c	2012-11-05 22:48:19.974893818 +0100
+@@ -24,8 +24,7 @@
+ #include <fcntl.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+-#include <glib/gstdio.h>
+-#include <glib/gprintf.h>
++#include <glib.h>
+ #include <libgimp/gimp.h>
+ 
+ #include "libgimp/stdplugins-intl.h"
+diff -aurN focusblur-3.2.6.orig/src/focusblurstock.h focusblur-3.2.6/src/focusblurstock.h
+--- focusblur-3.2.6.orig/src/focusblurstock.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/focusblurstock.h	2012-11-05 22:48:32.943390057 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_STOCK_H__
+ #define __FOCUSBLUR_STOCK_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
+diff -aurN focusblur-3.2.6.orig/src/focusblurtypes.h focusblur-3.2.6/src/focusblurtypes.h
+--- focusblur-3.2.6.orig/src/focusblurtypes.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/focusblurtypes.h	2012-11-05 22:54:16.993009890 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_TYPES_H__
+ #define __FOCUSBLUR_TYPES_H__
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ 
+ 
+ G_BEGIN_DECLS
+diff -aurN focusblur-3.2.6.orig/src/interface.h focusblur-3.2.6/src/interface.h
+--- focusblur-3.2.6.orig/src/interface.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/interface.h	2012-11-05 22:48:49.103990451 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_INTERFACE_H__
+ #define __FOCUSBLUR_INTERFACE_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ #include "focusblurtypes.h"
+ 
+diff -aurN focusblur-3.2.6.orig/src/render.h focusblur-3.2.6/src/render.h
+--- focusblur-3.2.6.orig/src/render.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/render.h	2012-11-05 22:49:00.472414325 +0100
+@@ -24,7 +24,7 @@
+ 
+ #include "config.h"
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ //#include <libgimp/gimp.h>
+ #include <libgimp/gimpui.h>
+ 
+diff -aurN focusblur-3.2.6.orig/src/shine.h focusblur-3.2.6/src/shine.h
+--- focusblur-3.2.6.orig/src/shine.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/shine.h	2012-11-05 22:49:12.248850628 +0100
+@@ -22,7 +22,7 @@
+ #ifndef __FOCUSBLUR_SHINE_H__
+ #define __FOCUSBLUR_SHINE_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <libgimp/gimptypes.h>
+ 
+ #include "focusblurtypes.h"
+diff -aurN focusblur-3.2.6.orig/src/source.h focusblur-3.2.6/src/source.h
+--- focusblur-3.2.6.orig/src/source.h	2012-11-05 22:46:14.254213069 +0100
++++ focusblur-3.2.6/src/source.h	2012-11-05 22:49:21.985211848 +0100
+@@ -24,7 +24,7 @@
+ 
+ #include "config.h"
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <libgimp/gimptypes.h>
+ 
+ #include "focusblurtypes.h"
